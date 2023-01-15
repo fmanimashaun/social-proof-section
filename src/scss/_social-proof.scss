@@ -6,8 +6,121 @@
 @use './topography.scss' as fs;
 
 .social-proof {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   max-width: 450px;
   margin-inline: auto;
-}
+  border: 1px solid red;
 
+  @media only screen and (min-width: 768px) {
+    max-width: 1110px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block-end: space.$social-proof-header-b-margin;
+    border: 1px solid red;
+    gap: 39px;
+
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      & > * {
+        flex: calc(50% - 39px);
+      }
+    }
+
+    &-right {
+      align-self: flex-start;
+      max-inline-size: 445px;
+      text-align: center;
+
+      @media only screen and (min-width: 768px) {
+        text-align: left;
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: fs.$page-heading;
+        line-height: 0.8;
+        letter-spacing: -1.42857px;
+        margin-block-end: 16px;
+
+        @media screen and (min-width: 768px) {
+          line-height: 0.857;
+          letter-spacing: -2px;
+        }
+      }
+
+      &-text {
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 25px;
+        letter-spacing: -0.633333px;
+        color: #927B91;
+      }
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      max-width: 540px;
+      border: 1px solid red;
+
+      @media only screen and (min-width: 768px) {
+        align-items: flex-start;
+      }
+
+      &-rating {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 16px;
+        padding: 16px;
+        border-radius: 8px;
+        background-color: colors.$light-grayish-magenta;
+
+        @media only screen and (min-width: 768px) {
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          padding-inline: 32px;
+          text-align: left;
+          width: fit-content;
+
+          &.report {
+            align-self: center;
+          }
+
+          &.besttech {
+            align-self: flex-end;
+          }
+        }
+
+
+
+        &-img {
+          display: block;
+          width: 116px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
