@@ -3,6 +3,7 @@
 @use './_fonts.scss';
 @use './_colors.scss';
 @use '_reset.scss';
+@use './space.scss';
 
 /* Global styles
 ------------------------------------ */
@@ -24,6 +25,13 @@ body {
   font-family: fonts.$primary-ff;
   color: colors.$very-dark-magenta;
   background-color: colors.$white;
+  background-image: url(../img/bg-top-mobile.svg), url(../img/bg-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+
+  @media only screen and (min-width: 780px) {
+    background-image: url(../img/bg-top-desktop.svg), url(../img/bg-bottom-desktop.svg);
+  }
 }
 
 .container {
