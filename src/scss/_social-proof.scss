@@ -1,0 +1,13 @@
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable csstree/validator */
+@use './_colors.scss';
+@use './_fonts.scss';
+@use './space.scss';
+@use './topography.scss' as fs;
+
+.social-proof {
+  width: 100%;
+  max-width: 450px;
+  margin-inline: auto;
+}
+
