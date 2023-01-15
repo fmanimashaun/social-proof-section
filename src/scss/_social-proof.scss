@@ -14,7 +14,7 @@
   margin-inline: auto;
   margin-block-start: space.$social-proof-t-margin;
   margin-block-end: 100px;
- 
+
 
   @media only screen and (min-width: 780px) {
     max-width: 1110px;
@@ -54,7 +54,7 @@
         margin-block-end: 16px;
 
         @media screen and (min-width: 780px) {
-          line-height: 0.857;
+          line-height: 0.9172;
           letter-spacing: -2px;
         }
       }
@@ -76,7 +76,7 @@
       gap: 16px;
       width: 100%;
       max-width: 540px;
-     
+
 
       @media only screen and (min-width: 780px) {
         align-items: flex-start;
@@ -89,6 +89,7 @@
         align-items: center;
         gap: 16px;
         width: 100%;
+        max-width: 445px;
         text-align: center;
         font-weight: 700;
         font-size: 17px;
@@ -101,9 +102,9 @@
           flex-direction: row;
           justify-content: flex-start;
           align-items: center;
+          padding-block: 20px;
           padding-inline: 32px;
           text-align: left;
-          width: fit-content;
 
           &.report {
             align-self: center;
@@ -132,7 +133,7 @@
     align-items: center;
     gap: space.$card-col-gap;
     min-height: 266px;
-   
+
 
     @media only screen and (min-width: 780px) {
       flex-direction: row;
@@ -188,5 +189,12 @@
         color: colors.$soft-pink;
       }
     }
+  }
+
+  &__card-body {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.303571px;
   }
 }
